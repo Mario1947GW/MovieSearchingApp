@@ -6,7 +6,7 @@ class SearchService
   def build_discover_url(params)
     base_url = "#{@host_url}discover/#{params[:type]}"
     query_params = {
-      api_key: ENV.fetch('API_KEY'),
+      api_key: ENV.fetch('API_KEY', ''),
       page: params[:page],
       primary_release_year: params[:primary_release_year],
       with_genres: params[:with_genres],
@@ -31,7 +31,9 @@ class SearchService
   end
 
   def build_person_url(person)
-    "#{@host_url}search/person?query=#{person}&api_key=#{ENV.fetch('API_KEY')}&"
+    base_url = "#{@host_url}search/person?query=#{person}&api_key=#{ENV.fetch('API_KEY')}&"
+    uri = URI(base_url)
+    uri.to_s
   end
 
   def cast_url(params)

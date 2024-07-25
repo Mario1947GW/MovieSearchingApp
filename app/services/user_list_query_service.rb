@@ -11,7 +11,7 @@ class UserListQueryService
   end
 
   def fetch_user_list_items_count
-    @user_list&.count
+    @user_list&.count || 0
   end
 
   def paginate_results(current_page, per_page)
