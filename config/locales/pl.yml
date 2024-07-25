@@ -1,0 +1,10 @@
+pl:
+  sidebar:
+    logout: "Wyloguj"
+    settings: "Ustawienia"
+    profile: "Profil"
+    my_list: "Moja lista"
+    search: "Wyszukaj"
+
+  texts:
+    link_of: "of"

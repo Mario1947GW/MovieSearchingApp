@@ -1,0 +1,29 @@
+<div class="flex bg-blue-200 p-2" data-controller="my-list" style="border-bottom:white solid;max-height: 400px;max-width: 100rem">
+  <div class="flex-col" style="max-width: 154px">
+    <%= image_tag(@image_path, style: 'height:231px !important;max-width: 154px; min-width: 154px;',onerror: "this.onerror=null; this.src='#{asset_path("no_image_placeholder.jpg")}';") %>
+    <div class="flex font-semibold">
+      <%= @title %>
+    </div>
+    <div class="flex">
+      <%= @release_date %>
+    </div>
+    <div class="flex">
+      <%= @vote_average.round(2) %>/10 ( <%= @vote_count %> )
+    </div>
+  </div>
+
+  <div class="flex flex-col w-full" style="max-height: 40rem">
+    <div class="p-2  h-4/5">
+      <%= @description.truncate(1000) %>
+    </div>
+
+    <div class="p-2 font-semibold h-1/5">
+      <%= @genres.join(" ") %>
+    </div>
+  </div>
+  <%= hidden_field_tag "id", @id, data: { my_list_target: "id" } %>
+  <%= hidden_field_tag "type", @type, data: { my_list_target: "type" } %>
+  <div class="self-end cursor-pointer">
+    <i class="fa-<%= @in_my_list ? 'solid' : "regular" %> fa-heart fa-2x" data-action="click->my-list#<%= @in_my_list ? "removeFromMyList" : 'addToMyList' %>" data-my-list-target="icon"></i>
+  </div>
+</div>

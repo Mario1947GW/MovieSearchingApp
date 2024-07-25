@@ -1,0 +1,47 @@
+<div class="flex flex-col columns-3 items-center">
+  <div class="p-4">
+    <h5 class="font-sans text-xl font-semibold leading-snug text-gray-900">
+      <%= t("headers.search") %>
+    </h5>
+  </div>
+  <%= form_with(url: "#", method: :post, data: { controller: 'search' }) do |form| %>
+    <div class="py-2">
+      <%= form.radio_button :title_or_filters, "title", data: { search_target: "radio", action: "click->search#filterForm" }, checked: true %>
+      <%= form.label :title_or_filters_title, t("labels.title_searching") %>
+      <%= form.radio_button :title_or_filters, "filters", data: { search_target: "radio", action: "click->search#filterForm" } %>
+      <%= form.label :title_or_filters_filters, t("labels.filters_searching") %>
+    </div>
+    <div class="py-2">
+      <%= form.label :title, t("labels.title") %>
+      <%= form.text_field :title, class: "my-2", data: { search_target: "title" } %>
+    </div>
+    <div class="hidden py-2">
+      <%= form.label :with_genres, t("labels.genres") %>
+      <%= form.select(:with_genres, @genres.map { |genre| [t("labels.movie_genres.#{genre.name}"), genre.genre_id] }, {}, { data: { search_target: "withGenres" }, multiple: true }) %>
+    </div>
+    <div class="hidden py-2">
+      <%= form.label :type, t("labels.type") %>
+      <%= form.select(:type, [[t("labels.movies"), "movie"],
+                              [t("labels.series"), "tv"]], {}, { data: { search_target: "type", action: "change->search#changeGenresList" } }) %>
+    </div>
+    <div class="hidden py-2">
+      <%= form.label :year, t("labels.year") %>
+      <%= form.number_field :year, class: "my-2", data: { search_target: "year" } %>
+    </div>
+    <div class="hidden py-2">
+      <%= form.label "vote_average.gte", t("labels.vote_average_min") %>
+      <%= form.number_field "vote_average.gte", class: "my-2", data: { search_target: "voteAverageMin" } %>
+    </div>
+    <div class="hidden py-2">
+      <%= form.label "first_actor", t("labels.first_actor") %>
+      <%= form.text_field "firstActor", class: "my-2", data: { search_target: "firstActor", action: "input->search#validate" } %>
+    </div>
+    <div class="hidden py-2">
+      <%= form.label "second_actor", t("labels.second_actor") %>
+      <%= form.text_field "second_actor", class: "my-2", data: { search_target: "secondActor", action: "input->search#validate" } %>
+    </div>
+    <%= form.button t("buttons.search"), type: "button",
+                    class: "cursor-pointer flex items-center w-full p-3 bg-blue-400 rounded-lg text-white text-start leading-tight transition-all hover:bg-blue-300 hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-blue-50 active:bg-opacity-80 active:text-blue-900 outline-none",
+                    data: { action: "click->search#search" } %>
+  <% end %>
+</div>

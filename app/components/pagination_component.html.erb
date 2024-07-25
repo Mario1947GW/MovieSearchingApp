@@ -1,0 +1,49 @@
+<div class="flex space-x-4 justify-center items-center">
+
+  <% unless first_page?(page: @current_page) %>
+    <%= link_to prev_page_path do %>
+      <i class="fa-solid fa-arrow-left fa-xl"></i>
+    <% end %>
+  <% end %>
+
+  <% unless first_page?(page: @current_page) %>
+    <%= link_to 1, first_page_path %>
+  <% end %>
+
+  <% unless first_page?(page: @previous_page - 2) %>
+    <%= link_to @previous_page - 2, prev_page_path(page: @previous_page - 2) %>
+  <% end %>
+
+  <% unless first_page?(page: @previous_page - 1) %>
+    <%= link_to @previous_page - 1, prev_page_path(page: @previous_page - 1) %>
+  <% end %>
+
+  <% unless first_page?(page: @previous_page) %>
+    <%= link_to @previous_page, prev_page_path %>
+  <% end %>
+
+  <%= link_to @current_page, "#", class: "font-semibold cursor-default" %>
+
+  <% unless last_page?(page: @next_page) %>
+    <%= link_to @next_page, next_page_path %>
+  <% end %>
+
+  <% unless last_page?(page: @next_page + 1) %>
+    <%= link_to @next_page + 1, next_page_path(page: @next_page + 1) %>
+  <% end %>
+
+  <% unless last_page?(page: @next_page + 2) %>
+    <%= link_to @next_page + 2, next_page_path(page: @next_page + 2) %>
+  <% end %>
+
+  <% unless last_page?(page: @current_page) %>
+    <p><%=t("texts.link_of") %></p>
+    <%= link_to @total_pages_number, next_page_path(page: @total_pages_number) %>
+  <% end %>
+
+  <% unless last_page? %>
+    <%= link_to next_page_path do %>
+      <i class="fa-solid fa-arrow-right fa-xl"></i>
+    <% end %>
+  <% end %>
+</div>

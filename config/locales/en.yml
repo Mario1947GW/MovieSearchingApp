@@ -1,0 +1,54 @@
+# Files in the config/locales directory are used for internationalization and
+# are automatically loaded by Rails. If you want to use locales other than
+# English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t "hello"
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t("hello") %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more about the API, please read the Rails Internationalization guide
+# at https://guides.rubyonrails.org/i18n.html.
+#
+# Be aware that YAML interprets the following case-insensitive strings as
+# booleans: `true`, `false`, `on`, `off`, `yes`, `no`. Therefore, these strings
+# must be quoted to be interpreted as strings. For example:
+#
+#     en:
+#       "yes": yup
+#       enabled: "ON"
+
+en:
+  errors:
+    messages:
+      user_list_item_duplicate: "Chosen movie or series is already on the list"
+  messages:
+    item_added_to_my_list: "Chosen movie or series has been successfully added to your list"
+  sidebar:
+    logout: "Log out"
+    settings: "Settings"
+    profile: "Profile"
+    my_list: "My list"
+    search: "Search"
+  buttons:
+    update: "Update"
+    search: "Search for a movie/series"
+  headers:
+    update_user_settings: "Update user settings"
+    no_results: "Have not found any results matching given parameters "
+  labels:
+    title_searching: "Search by title"
+    filters_searching: "Search by other filters"
+  placeholders:
+    genres: "Insert genres separated by comma"
+  texts:
+    link_of: "of"
