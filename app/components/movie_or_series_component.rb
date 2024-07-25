@@ -9,7 +9,7 @@ class MovieOrSeriesComponent < ViewComponent::Base
     @vote_count = obj['vote_count']
     @description = description(obj['overview'])
     @id = obj['id']
-    @in_my_list = my_list.include?(@id)
+    @in_my_list = my_list&.include?(@id)
   end
 
   def find_genres(obj, genres, type)

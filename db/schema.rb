@@ -10,58 +10,59 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 20_240_721_120_737) do
-  create_table 'genres', force: :cascade do |t|
-    t.string 'for', null: false
-    t.integer 'genre_id', null: false
-    t.string 'name', null: false
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
+ActiveRecord::Schema[7.1].define(version: 2024_07_21_120737) do
+  create_table "genres", force: :cascade do |t|
+    t.string "for", null: false
+    t.integer "genre_id", null: false
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table 'movies', force: :cascade do |t|
-    t.string 'title'
-    t.string 'movie_type'
-    t.string 'genre'
-    t.date 'released'
-    t.string 'plot'
-    t.string 'director'
-    t.string 'actors'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
+  create_table "movies", force: :cascade do |t|
+    t.string "title"
+    t.string "movie_type"
+    t.string "genre"
+    t.date "released"
+    t.string "plot"
+    t.string "director"
+    t.string "actors"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table 'people', force: :cascade do |t|
-    t.string 'name', null: false
-    t.string 'last_name', null: false
-    t.integer 'person_id', null: false
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
+  create_table "people", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "last_name", null: false
+    t.integer "person_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table 'user_list_items', force: :cascade do |t|
-    t.integer 'user_list_id'
-    t.integer 'item_id'
-    t.string 'item_type'
-    t.index ['user_list_id'], name: 'index_user_list_items_on_user_list_id'
+  create_table "user_list_items", force: :cascade do |t|
+    t.integer "user_list_id"
+    t.integer "item_id"
+    t.string "item_type"
+    t.index ["user_list_id"], name: "index_user_list_items_on_user_list_id"
   end
 
-  create_table 'user_lists', force: :cascade do |t|
-    t.integer 'user_id'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
-    t.index ['user_id'], name: 'index_user_lists_on_user_id'
+  create_table "user_lists", force: :cascade do |t|
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_user_lists_on_user_id"
   end
 
-  create_table 'users', force: :cascade do |t|
-    t.string 'email', default: '', null: false
-    t.string 'encrypted_password', default: '', null: false
-    t.string 'reset_password_token'
-    t.datetime 'reset_password_sent_at'
-    t.datetime 'remember_created_at'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
-    t.index ['email'], name: 'index_users_on_email', unique: true
-    t.index ['reset_password_token'], name: 'index_users_on_reset_password_token', unique: true
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
+
 end

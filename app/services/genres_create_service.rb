@@ -10,8 +10,8 @@ class GenresCreateService
   end
 
   def create_genres(type)
-    res = send_request("#{@host_url}genre/#{type}/list?api_key=#{ENV.fetch('API_KEY')}")
-    genres = JSON(res.read_body)['genres']
+    res = HttpService.new.send_request("#{@host_url}genre/#{type}/list?api_key=#{ENV.fetch('API_KEY')}")
+    genres = res['genres']
     genres&.each { |genre| Genre.create(for: type, genre_id: genre['id'].to_i, name: genre['name']) }
   end
 end
