@@ -16,7 +16,7 @@ class MovieOrSeriesComponent < ViewComponent::Base
     if obj['genre_ids']
       genres.select { |genre| obj['genre_ids'].include?(genre[:genre_id]) && genre[:for] == type }.pluck(:name)
     else
-      obj['genres'].pluck('name')
+      obj['genres']&.pluck('name')
     end
   end
 
@@ -29,7 +29,7 @@ class MovieOrSeriesComponent < ViewComponent::Base
   end
 
   def description(text)
-    return text if text.length > 0
+    return text if text&.length&.positive?
 
     I18n.t('texts.no_description_provided')
   end

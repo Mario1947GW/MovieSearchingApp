@@ -11,7 +11,7 @@ class MyListController < ApplicationController
   end
 
   def find_item_by_id(id, type)
-    HttpService.new.send_request("https://api.themoviedb.org/3/#{type}/#{id}?api_key=#{ENV.fetch('API_KEY')}")
+    HttpService.new.send_request("https://api.themoviedb.org/3/#{type}/#{id}?api_key=#{ENV.fetch('API_KEY', '')}")
   end
 
   def add_item_to_my_list

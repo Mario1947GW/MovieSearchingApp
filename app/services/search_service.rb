@@ -21,7 +21,7 @@ class SearchService
   def build_search_by_title_url(params)
     base_url = "#{@host_url}search/multi"
     query_params = {
-      api_key: ENV.fetch('API_KEY'),
+      api_key: ENV.fetch('API_KEY', ''),
       page: params[:page],
       query: params[:title]
     }.compact
@@ -31,7 +31,7 @@ class SearchService
   end
 
   def build_person_url(person)
-    base_url = "#{@host_url}search/person?query=#{person}&api_key=#{ENV.fetch('API_KEY')}&"
+    base_url = "#{@host_url}search/person?query=#{person}&api_key=#{ENV.fetch('API_KEY', '')}&"
     uri = URI(base_url)
     uri.to_s
   end

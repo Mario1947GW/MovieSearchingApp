@@ -5,7 +5,7 @@
   <h1 class="p-2 text-center"><%= t('headers.total_results')%>: <%=@items_count %></h1>
   <% @items.each do |item| %>
     <% found_item = find_item_by_id(item.item_id, item.item_type)%>
-    <%= render(MovieOrSeriesComponent.new(obj: found_item, type: item.item_type, api_key: ENV.fetch("API_KEY"), my_list: @my_list, genres: @genres)) %>
+    <%= render(MovieOrSeriesComponent.new(obj: found_item, type: item.item_type, api_key: ENV.fetch("API_KEY",''), my_list: @my_list, genres: @genres)) %>
   <% end %>
 
   <%= render(PaginationComponent.new(current_page: params[:page] || 1, total_pages_number: @total_pages, params: params)) %>

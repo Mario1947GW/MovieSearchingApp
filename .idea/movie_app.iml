@@ -9,6 +9,9 @@
       </configuration>
     </facet>
   </component>
+  <component name="ModuleRunConfigurationManager">
+    <shared />
+  </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/features" isTestSource="true" />
@@ -150,100 +153,105 @@
   </component>
   <component name="RailsPaths" isManagedAutomatically="true">
     <entry key="app">
-      <value>file://$MODULE_DIR$/app</value>
+      <value>file://$MODULE_DIR$/../movie_app_2\app</value>
     </entry>
     <entry key="app/assets">
-      <value>file://$MODULE_DIR$/app/assets</value>
+      <value>file://$MODULE_DIR$/../movie_app_2\app/assets</value>
     </entry>
     <entry key="app/channels">
-      <value>file://$MODULE_DIR$/app/channels</value>
+      <value>file://$MODULE_DIR$/../movie_app_2\app/channels</value>
     </entry>
     <entry key="app/controllers">
-      <value>file://$MODULE_DIR$/app/controllers</value>
+      <value>file://$MODULE_DIR$/../movie_app_2\app/controllers</value>
     </entry>
     <entry key="app/helpers">
-      <value>file://$MODULE_DIR$/app/helpers</value>
+      <value>file://$MODULE_DIR$/../movie_app_2\app/helpers</value>
     </entry>
     <entry key="app/mailers">
-      <value>file://$MODULE_DIR$/app/mailers</value>
+      <value>file://$MODULE_DIR$/../movie_app_2\app/mailers</value>
     </entry>
     <entry key="app/models">
-      <value>file://$MODULE_DIR$/app/models</value>
+      <value>file://$MODULE_DIR$/../movie_app_2\app/models</value>
     </entry>
     <entry key="app/views">
-      <value>file://$MODULE_DIR$/app/views</value>
+      <value>file://$MODULE_DIR$/../movie_app_2\app/views</value>
     </entry>
     <entry key="config">
-      <value>file://$MODULE_DIR$/config</value>
+      <value>file://$MODULE_DIR$/../movie_app_2\config</value>
     </entry>
     <entry key="config/cable">
-      <value>file://$MODULE_DIR$/config/cable.yml</value>
+      <value>file://$MODULE_DIR$/../movie_app_2\config/cable.yml</value>
     </entry>
     <entry key="config/database">
-      <value>file://$MODULE_DIR$/config/database.yml</value>
+      <value>file://$MODULE_DIR$/../movie_app_2\config/database.yml</value>
     </entry>
     <entry key="config/environment">
-      <value>file://$MODULE_DIR$/config/environment.rb</value>
+      <value>file://$MODULE_DIR$/../movie_app_2\config/environment.rb</value>
     </entry>
     <entry key="config/environments">
-      <value>file://$MODULE_DIR$/config/environments</value>
+      <value>file://$MODULE_DIR$/../movie_app_2\config/environments</value>
     </entry>
     <entry key="config/initializers">
-      <value>file://$MODULE_DIR$/config/initializers</value>
+      <value>file://$MODULE_DIR$/../movie_app_2\config/initializers</value>
     </entry>
     <entry key="config/locales">
-      <value>file://$MODULE_DIR$/config/locales</value>
+      <value>file://$MODULE_DIR$/../movie_app_2\config/locales</value>
     </entry>
     <entry key="config/routes">
-      <value>file://$MODULE_DIR$/config/routes</value>
+      <value>file://$MODULE_DIR$/../movie_app_2\config/routes</value>
     </entry>
     <entry key="config/routes.rb">
-      <value>file://$MODULE_DIR$/config/routes.rb</value>
+      <value>file://$MODULE_DIR$/../movie_app_2\config/routes.rb</value>
     </entry>
     <entry key="config/secrets">
-      <value>file://$MODULE_DIR$/config</value>
+      <value>file://$MODULE_DIR$/../movie_app_2\config</value>
     </entry>
     <entry key="db">
-      <value>file://$MODULE_DIR$/db</value>
+      <value>file://$MODULE_DIR$/../movie_app_2\db</value>
     </entry>
     <entry key="db/migrate">
-      <value>file://$MODULE_DIR$/db/migrate</value>
+      <value>file://$MODULE_DIR$/../movie_app_2\db/migrate</value>
     </entry>
     <entry key="db/seeds.rb">
-      <value>file://$MODULE_DIR$/db/seeds.rb</value>
+      <value>file://$MODULE_DIR$/../movie_app_2\db/seeds.rb</value>
     </entry>
     <entry key="lib">
-      <value>file://$MODULE_DIR$/lib</value>
+      <value>file://$MODULE_DIR$/../movie_app_2\lib</value>
     </entry>
     <entry key="lib/assets">
-      <value>file://$MODULE_DIR$/lib/assets</value>
+      <value>file://$MODULE_DIR$/../movie_app_2\lib/assets</value>
     </entry>
     <entry key="lib/tasks">
-      <value>file://$MODULE_DIR$/lib/tasks</value>
+      <value>file://$MODULE_DIR$/../movie_app_2\lib/tasks</value>
     </entry>
     <entry key="lib/templates">
-      <value>file://$MODULE_DIR$/lib/templates</value>
+      <value>file://$MODULE_DIR$/../movie_app_2\lib/templates</value>
     </entry>
     <entry key="log">
-      <value>file://$MODULE_DIR$/log/development.log</value>
+      <value>file://$MODULE_DIR$/../movie_app_2\log/development.log</value>
     </entry>
     <entry key="public">
-      <value>file://$MODULE_DIR$/public</value>
+      <value>file://$MODULE_DIR$/../movie_app_2\public</value>
     </entry>
     <entry key="public/javascripts">
-      <value>file://$MODULE_DIR$/public/javascripts</value>
+      <value>file://$MODULE_DIR$/../movie_app_2\public/javascripts</value>
     </entry>
     <entry key="public/stylesheets">
-      <value>file://$MODULE_DIR$/public/stylesheets</value>
+      <value>file://$MODULE_DIR$/../movie_app_2\public/stylesheets</value>
+    </entry>
+    <entry key="test/mailers/previews">
+      <value>file://$MODULE_DIR$/spec/mailers/previews</value>
+      <value>file://$MODULE_DIR$/test/mailers/previews</value>
+      <value>file://$MODULE_DIR$/../movie_app_2\test/mailers/previews</value>
     </entry>
     <entry key="tmp">
-      <value>file://$MODULE_DIR$/tmp</value>
+      <value>file://$MODULE_DIR$/../movie_app_2\tmp</value>
     </entry>
     <entry key="vendor">
-      <value>file://$MODULE_DIR$/vendor</value>
+      <value>file://$MODULE_DIR$/../movie_app_2\vendor</value>
     </entry>
     <entry key="vendor/assets">
-      <value>file://$MODULE_DIR$/vendor/assets</value>
+      <value>file://$MODULE_DIR$/../movie_app_2\vendor/assets</value>
     </entry>
   </component>
 </module>

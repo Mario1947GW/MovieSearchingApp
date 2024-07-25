@@ -3,7 +3,7 @@
 <% else %>
   <h1 class="p-2 text-center font-semibold"><%= t('headers.total_results')%>: <%=@total_results %></h1>
   <% @results.each do |element| %>
-    <%= render(MovieOrSeriesComponent.new(obj: element, type: params[:type] || element["media_type"], api_key: ENV.fetch("API_KEY"), my_list: @my_list, genres: @genres)) %>
+    <%= render(MovieOrSeriesComponent.new(obj: element, type: params[:type] || element["media_type"], api_key: ENV.fetch("API_KEY",''), my_list: @my_list, genres: @genres)) %>
   <% end %>
 
   <%= render(PaginationComponent.new(current_page: params[:page], total_pages_number: @total_pages, params: params)) %>

@@ -4,7 +4,7 @@ require 'webmock/rspec'
 RSpec.describe GenresCreateService do
   let(:service) { described_class.new }
   let(:http_service_double) { instance_double(HttpService) }
-  let(:api_key) { ENV.fetch('API_KEY') }
+  let(:api_key) { ENV.fetch('API_KEY', '') }
   let(:host_url) { 'https://api.themoviedb.org/3/' }
   let(:response_body) do
     {
